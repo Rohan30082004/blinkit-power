@@ -5,30 +5,50 @@
 ---
 ## Problem Statement  
 
-This dashboard analyzes Blinkit order data to provide insights into customer order trends, delivery performance, and improvement areas for operational efficiency. It helps in identifying delivery times, customer preferences, and key metrics such as the average order value, most ordered items, and customer satisfaction based on repeat orders.  
+This dashboard analyzes Blinkit orders to help understand key sales metrics, outlet performance, and item-level insights. It identifies the trends and patterns in total sales, item types, outlet sizes, and customer preferences. This data helps stakeholders optimize their operations, improve outlet performance, and identify the most profitable segments.
 
-The insights gained from this dashboard enable Blinkit to enhance its delivery services by reducing average delivery times and addressing common customer grievances.  
-
-For instance, if a significant proportion of orders experience delays beyond 30 minutes or cancellations due to item unavailability, Blinkit can address these issues by improving inventory management and optimizing delivery routes.  
-
-Since a majority of orders are placed during specific time windows, such as evenings, the company can scale its resources effectively during peak hours to ensure timely deliveries.  
+The dashboard captures key information such as total sales, number of items, average sales, and ratings. By understanding outlet sizes and locations contributing to the revenue, stakeholders can further strategize their operations to drive growth and improve customer satisfaction. 
 
 ---
 
 ### Steps Followed  
 
-- **Step 1**: Loaded the dataset (CSV format) into Power BI Desktop.  
-- **Step 2**: Opened Power Query Editor and enabled “Column distribution,” “Column quality,” and “Column profile” for better data understanding.  
-- **Step 3**: Set profiling based on the entire dataset to analyze all rows, not just the first 1,000.  
-- **Step 4**: Identified null values in columns such as "Delivery Time" and "Order Status" and decided to exclude nulls in key calculations.  
-- **Step 5**: Added measures to calculate average delivery time and order value while excluding incomplete or canceled orders.  
-- **Step 6**: Used slicers for fields like "City," "Order Type," and "Payment Method" to allow dynamic filtering.  
-- **Step 7**: Designed visuals:  
-  - Two card visuals for total number of orders and average order value.  
-  - Line chart representing order trends over different time periods (hourly, daily, weekly).  
-  - Stacked bar chart to display delivery times segmented by city.  
-- **Step 10**: Added KPIs for total number of unique customers and percentage of repeat customers using DAX.  
-- **Step 11**: Published the report to Power BI Service for web accessibility and stakeholder reviews.  
+- **Step 1**: Loaded the Blinkit orders dataset (CSV file) into Power BI Desktop.
+
+**Step 2**: Opened Power Query Editor. Under the "View" tab, enabled “Column Distribution,” “Column Quality,” and “Column Profile” options to analyze the data.
+
+**Step 3**: Selected “Column profiling based on entire dataset” for thorough inspection and identified any missing or erroneous data.
+
+**Step 4**: Observed that null/empty values were minimal across the dataset; therefore, no significant cleaning was required.
+
+**Step 5**: Created visual filters (slicers) for Outlet, Item Type, and Outlet Establishment Year to allow users to interact with the data dynamically.
+
+**Step 6**: Created card visuals to showcase key metrics:
+
+Total Sales ($1.2M)
+
+Number of Items Sold (9K)
+
+Average Rating (3.92)
+
+Average Sales ($141.0)
+
+
+**Step 7**: Used Donut Charts to visualize:
+
+Items by Fat Content (Regular and Low Fat)
+
+Outlet Sizes (Small, Medium, and High)
+
+
+**Step 8**: Added a Bar Chart to display the sales contribution by different Item Types (e.g., Snacks, Fruits, Frozen, Dairy, etc.) to highlight the top-performing product categories.
+
+Step 9: Created a Line Chart to analyze the total sales trend across different outlet establishment years (2012-2022).
+
+Step 10: Designed a Bar Chart to display Sales by Outlet Location (Tier 1, Tier 2, Tier 3) and identified Tier 3 as the top contributor to total sales.
+
+Step 11: Created a table to summarize key outlet types with the following metrics:
+
 
 ---
 
@@ -75,7 +95,7 @@ A single-page dashboard was created, published to Power BI Service, and analyzed
   - Beverages (25%)  
   - Snacks (20%)  
   - Personal Care (15%)  
-- **Payment Methods**:  
+- **Fat content**:  
   - Online Payments: 70%  
   - Cash on Delivery: 30%  
 
